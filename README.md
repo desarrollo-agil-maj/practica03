@@ -14,3 +14,12 @@ En este juego, eres un estudiante de ingeniería informática que se enfrenta a 
 
 ## Captura de pantalla del Product Backlog
 ![](imagenes/trello.png)
+
+## Captura de pantalla del Product Backlog con la nueva historia de usuario añadida
+![](imagenes/trellov2.png)
+Las etiquetas rojas indican que esas historias de usuario ya han sido contempladas en el Sprint Backlog.
+Las etiquetas azules indican aquellas historias de usuario que han sido añadidas para un sprint en concreto.
+
+
+## Captura de pantalla del Sprint Backlog
+![](imagenes/trellov3.png)
