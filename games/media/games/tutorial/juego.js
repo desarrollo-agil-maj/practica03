@@ -67,6 +67,7 @@ undum.game.situations = {
         <p>Ante semejante decepción al no recibir los redbulls (porque suspender a estas altura de la vida te da ya un poco igual) decides no seguir estudiando nunca más por lo que te metes en Magisterio</p>\
         \
         <p class='transient'>Aún estas a tiempo de no entrar en magisterio pincha <a href='hub'>aquí</a> y vuelve a la elección de vehículo..</p>",
+		// <!--Enlace a otra situacion creado -->
         {
             heading: "Pasas de todo y te quedas durmiendo",
             diplayOrder: 2,
@@ -108,6 +109,7 @@ undum.game.situations = {
 		<p> Con sus habilidades de ninja te lanza la zapatilla nada m.as escuchar la puerta a la vez que te grita NIÑO QUE HACES AQUÍ YA?!?!\
 		<p> Te das cuenta de que la has cagado. Aún estás a tiempo de no recibir el zapatillazo. Pulsa \
         <a href='hub'>aquí</a> para volver a la elección de vehículo.</p>",
+		// <!--Enlace a otra situacion creado -->
         {
             actions: {
                 "one-time-action": "<p>	</p>"
@@ -118,6 +120,7 @@ undum.game.situations = {
 	"<p>Pero vamos a ver, ¿tú que te creías? ¿pensabas que los chupitos de jagger del sábado no te iban a pasar factura?</p>\
         <p>Pues ahí lo tienes, no llevas ni 2 minutos andando y te da un pinchazo en el costado que no te deja ni respirar.</p>\
 		<p>Ante semejante tesitura decides <a href='oneshot'>volverte a casa</a> ya que en el fondo sabías que nunca llegarías a tiempo. Y además tienes una partida de la play pendiente. </p>",
+		// <!--Enlace a otra situacion creado -->
 		{
             actions: {
                 "one-time-action": "<p>	</p>"
@@ -152,6 +155,7 @@ undum.game.situations = {
 		<p> De repente llaman a tu puerta y aparece Victor, el profesor de Desarrollo Ágil, pero no trae buenas noticias... Resulta que no has estado unas horas inconsciente, has estado tres meses en coma y viene a decirte que has suspendido la asignatura...</p>\
 		<p> Aún estás a tiempo de no pasar por el hospital y suspender Desarrollo Ágil, pulsa \
         <a href='hub'>aquí</a> para volver a la elección de vehículo.</p>",
+		// <!--Enlace a otra situacion creado -->
 		
     ),
     // Again, we'll retrieve the text we want from the HTML file.
