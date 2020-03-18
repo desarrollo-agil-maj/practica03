@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Game Title: edit this -->
+    <title>Viaje al centro de la UJA</title>
+    <!-- End of Game Title -->
+
+    <!-- Remove this if you don't use the Tangerine font in your
+         stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Tangerine'
+          rel='stylesheet' type='text/css'>
+
+    <!-- This is your game's stylesheet, modify it if you like. -->
+    <link media="screen"
+          rel="stylesheet" href="media/css/undum.css">
+
+    <!-- Suppport for mobile devices. -->
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <link rel="apple-touch-icon" href="media/img/iphone/icon.png">
+    <link rel="apple-touch-startup-image" href="media/img/iphone/splash.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--[if !IE]>-->
+    <link media="only screen and (max-width: 640px)"
+          rel="stylesheet" type="text/css" href="media/css/undum-mobile.css">
+    <!--<![endif]-->
+
+  </head>
+  <body>
+    <!-- This isn't needed and isn't visible in desktop versions,
+         because we can display the character information and the
+         tools onscreen all the time. -->
+    <div id="toolbar">
+      <!-- Set this to be a small version of the title, for the
+           toolbar on mobile devices. -->
+      <h1>Undum</h1>
+      <div class="nav">
+        <a href="#" class="button" id="menu-button">Menu</a>
+      </div>
+    </div>
+    <ul id="menu">
+      <li><a href="#title, #content_wrapper">Story</a></li>
+      <li><a href="#character_panel">Character</a></li>
+      <li><a href="#info_panel">Info</a></li>
+    </ul>
+
+    <div id="page">
+
+      <div id="tools_wrapper">
+        <div id="info_panel" class="tools left">
+
+          <!-- Game Background: edit this -->
+          <h1>Viaje al centro de la UJA</h1>
+          <p>
+		  Este es un ejemplo de juego "conversacional" creado con Undum.
+		  </p>
+		  <p>
+		  En este juego, eres un estudiante de ingeniería informática que se enfrenta a un rutinario día. Deberás elegir entre una serie de posibles acciones para asistir a clase y aprobar todas tus asignaturas.
+		  </p>
+		  
+		  <p>El juego comienza en tu cama, acabas de despertarte después de haber dormido media hora porque has estado toda la noche peleándote con un "Run Failed" en tu práctica de Estructuras de Datos; deberás ser capaz de llegar a clase sin morir en el intento.
+          </p>
+          <!-- End of Game Background -->
+
+          <div class='buttons'>
+            <button id="save">Guardar</button><button id="erase">Borrar</button>
+          </div>
+        </div>
+
+        <div id="character_panel" class="tools right">
+          <h1>Tu personaje</h1>
+          <div id="character">
+            <div id="character_text">
+              <div id="character_text_content"></div>
+            </div>
+            <div id="qualities"></div>
+          </div>
+        </div>
+      </div> <!-- End of div.tools_wrapper -->
+
+      <div id="mid_panel">
+        <div id="title">
+          <div class="label">
+
+            <!-- Game Title: edit this -->
+            <h1>Viaje al centro de la UJA<span class='fancy'></span></h1>
+            <h2>Ildefonso Serrano Civantos</br>
+				Mario Díaz González </br>
+				Francisco Javier Martínez Bueno				
+			</h2>
+            <!-- End of Game Title -->
+
+            <noscript><p class="noscript_message">This game requires 
+              Javascript.</p></noscript>
+            <p class="click_message">click para empezar</p>
+          </div>
+        </div>
+
+        <div id="content_wrapper">
+          <div id="content">
+          </div>
+          <a name="end_of_content"></a>
+        </div>
+
+        <div id="legal">
+          <!-- Your Copyright: edit this -->
+          <p>Francisco Javier Martínez Bueno, Ildefonso Serrano Civantos y Mario Díaz González &copy; 2020.</p>
+          <!-- End of Your Copyright -->
+
+          <!-- This line is totally optional. -->
+          <p>Creado con <a href="http://idmillington.github.io/undum/">Undum</a>.</p>
+        </div>
+      </div>
+    </div> <!-- End of div.page -->
+
+    <!-- Holds UI elements that will be cloned and placed in the main
+         page. This block itself is always hidden. -->
+    <div id="ui_library">
+      <div id="quality" class="quality">
+        <span class="name" data-attr="name"></span>
+        <span class="value" data-attr="value"></span>
+      </div>
+
+      <div id="quality_group" class="quality_group">
+        <h2 data-attr="title"></h2>
+        <div class="qualities_in_group">
+        </div>
+      </div>
+
+      <div id="progress_bar" class="progress_bar">
+        <span class="name" data-attr="name"></span>
+        <span class="value" data-attr="value"></span>
+        <div class="progress_bar_track">
+          <div class="progress_bar_color" data-attr="width">
+          </div>
+        </div>
+        <span class="left_label" data-attr="left_label"></span>
+        <span class="right_label" data-attr="right_label"></span>
+      </div>
+
+      <hr id="turn_separator">
+    </div>
+
+    <!-- You don't need to have this block here, but it is defined in
+         the CSS file as hidden, so it is a good spot to hide content
+         you want to load from your game code. See the
+         tutorial.game.js file for details of how this is used. -->
+    <div id="content_library">
+      <div id="s_situations">
+        <h1>Situations</h1>
+        <p>
+          In Undum, all interaction takes place in a situation. You
+          can think of it either as a 'Room' in traditional
+          interactive fiction (although it is less flexible than
+          that), or as a 'Page' in a Choose Your Own Adventure book
+          (though it is more flexible than that).
+        </p>
+        <p>
+          At any point, the character is in exactly one situation, and
+          that situation is responsible for everything that happens to
+          them. Situations are chunks of code that generate the output
+          you are reading here. For example, this text was generated
+          by the <em>enter</em> method of the 'situations' situation.
+        </p>
+        <p class='transient'>
+          Let's <a href='todo'>move on again</a>.
+        </p>
+      </div>
+
+      <div id="s_saving">
+        <h1>Coger 'prestado' el coche a tu madre</h1>
+		
+		<img src='media/img/coche.png' class='float_right'>
+        <p>Por tu cabeza pasa la brillante idea de coger 'prestado' el coche de tu madre,
+          aún sabiendo que no tienes carnet ya que el verano pasado preferiste
+          estar de fiesta todos los días antes de apuntarte a una autoescuela.
+        </p>
+        <p>
+          Mientras coges sigilosamente las llaves del coche, tu madre lo está escuchando desde
+          su cuarto. Sales de casa, coges el ascensor y mientras estás dentro piensas que ya se
+          ha resuelto tu problema para poder llegar a tiempo a clase. Sales del ascensor y... tu madre 
+          te está esperando para pegarte la mayor bronca que te ha podido caer a lo largo
+          de tu vida.
+        </p>
+        <p class='transient'>
+          Esta opción no te ha servido, pincha <a href='hub'>aquí</a> para volver a la elección de vehiculos.
+        </p>
+      </div>
+
+      <!-- Some situations defined entirely in the HTML -->
+      <div id="hub" class="situation" data-choices="#topic"
+           data-option-text="View Topic List">
+        <h1 class="transient">Opciones</h1>
+        <p class="transient">Elige una opción. Ten cuidado, solo una te llevará a la universidad</p>
+      </div>
+
+      <div id="implicit" class="situation" data-tags="topic"
+           data-heading="Tienes hambre y quieres desayunar" data-display-order="2"
+           data-choices="#example">
+		   <img src='media/img/cafe.png' class='float_right'>
+        <p>Te acabas de levantar, estás hambrientro y sediento así que decides ir a la cocina
+		a por algo para desayunar. Encima del pollo te han dejado tus
+		padres un poco de café pero decides abrir la nevera para barajar otras opciones.</p>
+        <p>Hay leche para hacerte un Cola-Cao calentito, aunque al final de la misma también encuentras una 
+		GreenCola fresquita para medio despertarte.</p>
+		<p>Te vas a hacer unas tostadas para desayunar pero solo te queda Nutella así que decides hacerlas
+		de eso.</p>
+		
+        <p>En función de la bebida elegida tendrás más o menos sueño, todo depende de tu elección final.
+          <span class="transient">Elige alguna opción:</span></p>
+      </div>
+
+      <div id="example-choices" class="situation" data-choices="#example">
+        <p class="transient">Puedes volver al 
+          <a href='hub'>menú inicial</a> o elegir otra opción:</p>
+      </div>
+    </div>
+
+    <!-- Load the libraries we depend on -->
+    <script type="text/javascript" src="media/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="media/js/undum.js"></script>
+
+    <!-- Change the name of this file. It is your main game file. -->
+    <script type="text/javascript"
+            src="media/games/tutorial/juego.js"></script>
+  </body>
+</html>
