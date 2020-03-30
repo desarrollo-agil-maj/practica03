@@ -58,7 +58,18 @@ undum.game.situations = {
         optionText: "",
         displayOrder: 1
     }),
-		
+        
+    llegaraclase1: new undum.SimpleSituation(
+        "<p>Aunque es un poco tarde tu barriga está empezando a hacer ruidos raros, tienes mucha hambre y decides ir a echarte una buena tostada en la Colombia50.</p>\
+        <p>La tostada te ha sabido a poco así que decides pedirte un sandwich Francés con extra de nutella, te encantan</p>\
+        <p>A pesar de haber comido bastante sigues con dolor de barriga; a lo mejor no ha sido buena idea comer tanto, empiezas a sentirte cada vez peor y decides ir al baño.</p>\
+        \
+        <p>Después de estar calentando la tapa del vater durante más de media hora empiezas a pensar que no ha sido buena idea ir a desayunar, puedes <a href='last'>pinchar aquí</a> y elegir de nuevo qué hacer justo al llegar a la universidad.</p>",
+        {
+            heading: "Ir a desayunar",
+            tags: ["topic"]
+        }
+    ),
     links: new undum.SimpleSituation(
         "<p>Al ver que son las 10.30 de la mañana y que es demasiado pronto para despertarte, quitas la alarma de tu xiaomi, te das la vuelta y te vuelves a dormir.</p>\
         \
@@ -220,11 +231,11 @@ undum.game.situations = {
 
     "last": new undum.SimpleSituation(
         "<h1>¡Enhorabuena!</h1>\
-        <p>Has decidido bajar en tu SUPER patinete Xiaomi to tuneado, tiene leds por todas partes y es capaz de alcanzar los 80kmh; antes pillaba 120kmh pero desde que te comiste aquella traicionera farola decidiste bajarle un poco la potencia. </p>\
+        <p>Has decidido bajar en tu SUPER patinete Xiaomi to tuneado, tiene leds por partes y es capaz de alcanzar los 80kmh; antes pillaba 120kmh pero desde que te comiste aquella traicionera farola decidiste bajarle un poco la potencia. </p>\
         \
 		<img src='media/img/scooter.png' class='float_right'>\
-			<p>Has llegado sin problema a clase, tu profesor de Desarrollo Ágil está muy contento contigo porque has sido bastante puntual, tus otros compañeros han elegido las otras opciones así que eres el único que ha llegado vivo. Estáis Victor y tú a solas en clase, después de varios silencios incómodos se levanta, se acerca a tu mesa, te mira a los ojos y te susurra: <em>enhorabuena, tienes un 10 en la asignatura.</em></p>\
-        <h1>FINAL</h1>",
+			<p>Has llegado sin problema a la universidad, sin embargo, tu profesor de Desarrollo Ágil está muy enfadado contigo porque todavía no has llegado a clase.<br/> Ahora debes elegir alguna de las siguientes opciones para llegar a clase de forma correcta, sano y salvo:<br/></p>\
+        <p>Estás bastante hambriento y así nadie puede desarrollar sus prácticas, por lo tanto, puedes <a href='llegaraclase1'>ir a desayunar</a>.</p>",
         {
             tags: ["topic"],
             optionText: "Patinete Xiaomi Pro",
