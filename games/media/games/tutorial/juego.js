@@ -51,19 +51,19 @@ undum.game.situations = {
     // looking it up in the HTML document. For static text that makes
     // more sense than writing it longhand.
     situations: new undum.Situation({
-        enter: function(character, system, from) {
+        enter: function (character, system, from) {
             system.write($("#s_situations").html());
         },
         tags: ["opción"],
         optionText: "",
         displayOrder: 1
     }),
-        
+
     llegaraclase1: new undum.SimpleSituation(
         "<p>Aunque es un poco tarde tu barriga está empezando a hacer ruidos raros, tienes mucha hambre y decides ir a echarte una buena tostada en la Colombia50.</p>\
         <p>La tostada te ha sabido a poco así que decides pedirte un sandwich Francés con extra de nutella, te encantan</p>\
         <p>A pesar de haber comido bastante sigues con un intenso dolor de barriga; a lo mejor no ha sido buena idea comer tanto, sientes retortijones, empiezas a sentirte cada vez peor, (la camarera debe haber puesto nutella caducada) por lo que no tienes otra que <a href='llegaraclase2'>ir al baño</a>.</p>"
-    ,
+        ,
         {
             heading: "Ir a desayunar",
             tags: ["topic"]
@@ -86,7 +86,7 @@ undum.game.situations = {
         <p>Ante semejante decepción al no recibir los redbulls (porque suspender a estas altura de la vida te da ya un poco igual) decides no seguir estudiando nunca más por lo que te metes en Magisterio</p>\
         \
         <p class='transient'>Aún estas a tiempo de no entrar en magisterio pincha <a href='hub'>aquí</a> y vuelve a la elección de vehículo..</p>",
-		// <!--Enlace a otra situacion creado -->
+        // <!--Enlace a otra situacion creado -->
         {
             heading: "Pasas de todo y te quedas durmiendo",
             diplayOrder: 2,
@@ -95,7 +95,7 @@ undum.game.situations = {
     ),
     sticky: new undum.SimpleSituation(
         "\ <img src='media/games/tutorial/woodcut2.png' class='float_left'>\
-		<p>Sales de casa decidido a coger el autobús. Llegas a la parada y esperas...</p>\
+		<p>Sales de casa decidido a coger el autobús. No sin antes haber <a href='./tarjeta' class='once'> cogido la tarjeta</a>. Llegas a la parada y esperas...</p>\
         \
        \
         <p>5 minutos...</p>\
@@ -119,7 +119,13 @@ undum.game.situations = {
         {
             tags: ["topic"],
             displayOrder: 3,
-            heading: "Decides bajar en autobús"
+            heading: "Decides bajar en autobús",
+            actions: {
+                'tarjeta': function (character, system, action) {
+                    system.setQuality("tarjeta", true);
+                    system.setCharacterText("<p>Estupendo, ahora podrás coger el autobús sin problema</p>");
+                }
+            }
         }
     ),
     oneshot: new undum.SimpleSituation(
@@ -128,19 +134,19 @@ undum.game.situations = {
 		<p> Con sus habilidades de ninja te lanza la zapatilla nada m.as escuchar la puerta a la vez que te grita NIÑO QUE HACES AQUÍ YA?!?!\
 		<p> Te das cuenta de que la has cagado. Aún estás a tiempo de no recibir el zapatillazo. Pulsa \
         <a href='hub'>aquí</a> para volver a la elección de vehículo.</p>",
-		// <!--Enlace a otra situacion creado -->
+        // <!--Enlace a otra situacion creado -->
         {
             actions: {
                 "one-time-action": "<p>	</p>"
             }
         }
     ),
-	 oneshot1: new undum.SimpleSituation(
-	"<p>Pero vamos a ver, ¿tú que te creías? ¿pensabas que los chupitos de jagger del sábado no te iban a pasar factura?</p>\
+    oneshot1: new undum.SimpleSituation(
+        "<p>Pero vamos a ver, ¿tú que te creías? ¿pensabas que los chupitos de jagger del sábado no te iban a pasar factura?</p>\
         <p>Pues ahí lo tienes, no llevas ni 2 minutos andando y te da un pinchazo en el costado que no te deja ni respirar.</p>\
 		<p>Ante semejante tesitura decides <a href='oneshot'>volverte a casa</a> ya que en el fondo sabías que nunca llegarías a tiempo. Y además tienes una partida de la play pendiente. </p>",
-		// <!--Enlace a otra situacion creado -->
-		{
+        // <!--Enlace a otra situacion creado -->
+        {
             actions: {
                 "one-time-action": "<p>	</p>"
             }
@@ -155,10 +161,10 @@ undum.game.situations = {
             tags: ["topic"],
             displayOrder: 4,
             actions: {
-               
+
             },
-            exit: function(character, system, to) {
-                system.setQuality("velocidad", character.qualities.velocidad+100);
+            exit: function (character, system, to) {
+                system.setQuality("velocidad", character.qualities.velocidad + 100);
             }
         }
     ),
@@ -174,15 +180,15 @@ undum.game.situations = {
 		<p> De repente llaman a tu puerta y aparece Victor, el profesor de Desarrollo Ágil, pero no trae buenas noticias... Resulta que no has estado unas horas inconsciente, has estado tres meses en coma y viene a decirte que has suspendido la asignatura...</p>\
 		<p> Aún estás a tiempo de no pasar por el hospital y suspender Desarrollo Ágil, pulsa \
         <a href='hub'>aquí</a> para volver a la elección de vehículo.</p>",
-		// <!--Enlace a otra situacion creado -->
-		
+        // <!--Enlace a otra situacion creado -->
+
     ),
     // Again, we'll retrieve the text we want from the HTML file.
     "saving": new undum.Situation({
-        enter: function(character, system, from) {
+        enter: function (character, system, from) {
             system.write($("#s_saving").html());
         },
-		
+
         tags: ["topic"],
         displayOrder: 6,
         optionText: "Coger 'prestado' el coche a tu madre"
@@ -193,13 +199,13 @@ undum.game.situations = {
         la lista de opciones de tu personaje.</span>.</p>",
         {
             tags: ["example"],
-            enter: function(character, system, from) {
-                system.animateQuality("sueño", character.qualities.sueño+1)
+            enter: function (character, system, from) {
+                system.animateQuality("sueño", character.qualities.sueño + 1)
                 system.doLink('example-choices');
             },
             optionText: "Cola-Cao calentito",
             displayOrder: 1,
-            canView: function(character, system, host) {
+            canView: function (character, system, host) {
                 return character.qualities.sueño < 4;
             }
         }
@@ -209,29 +215,29 @@ undum.game.situations = {
         la lista de opciones de tu personaje</span>.</p>",
         {
             tags: ["example"],
-            enter: function(character, system, from) {
-                system.animateQuality("sueño", character.qualities.sueño-1)
+            enter: function (character, system, from) {
+                system.animateQuality("sueño", character.qualities.sueño - 1)
                 system.doLink('example-choices');
             },
             optionText: "GreenCola fresquita",
             displayOrder: 2,
-            canView: function(character, system, host) {
+            canView: function (character, system, host) {
                 return character.qualities.sueño > -2;
             }
         }
     ),
-	"cafe": new undum.SimpleSituation(
+    "cafe": new undum.SimpleSituation(
         "<p>Tu sueño ha disminuido<span class='transient'>, fíjate en\
         la lista de opciones de tu personaje</span>.</p>",
         {
             tags: ["example"],
-            enter: function(character, system, from) {
-                system.animateQuality("sueño", character.qualities.sueño-1)
+            enter: function (character, system, from) {
+                system.animateQuality("sueño", character.qualities.sueño - 1)
                 system.doLink('example-choices');
             },
             optionText: "Café con leche",
             displayOrder: 3,
-            canView: function(character, system, host) {
+            canView: function (character, system, host) {
                 return character.qualities.sueño > -4;
             }
         }
@@ -248,7 +254,7 @@ undum.game.situations = {
             tags: ["topic"],
             optionText: "Patinete Xiaomi Pro",
             displayOrder: 4,
-            enter: function(character, system, from) {
+            enter: function (character, system, from) {
                 system.setQuality("notaDesarrolloAgil", 10);
                 system.setCharacterText(
                     "<p>¡Bien! Serás capaz de llegar a tiempo con tu super patinete Xiaomi.</p>"
@@ -268,14 +274,16 @@ undum.game.start = "start";
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
     velocidad: new undum.IntegerQuality(
-        "Velocidad", {priority:"0001", group:'stats'}
+        "Velocidad", { priority: "0001", group: 'stats' }
     ),
     sueño: new undum.FudgeAdjectivesQuality(
-        "Sueño", {priority:"0002", group:'stats'}
+        "Sueño", { priority: "0002", group: 'stats' }
     ),
-
+    tarjeta: new undum.OnOffQuality(
+        "Tarjeta del autobús", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
+    ),
     notaDesarrolloAgil: new undum.NonZeroIntegerQuality(
-        "Nota en Desarrollo Ágil", {priority:"0001", group:'progress'}
+        "Nota en Desarrollo Ágil", { priority: "0001", group: 'progress' }
     )
 };
 
@@ -286,16 +294,17 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-    stats: new undum.QualityGroup(null, {priority:"0001"}),
-    progress: new undum.QualityGroup('Progreso', {priority:"0002"})
+    stats: new undum.QualityGroup(null, { priority: "0001" }),
+    progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
-undum.game.init = function(character, system) {
+undum.game.init = function (character, system) {
     character.qualities.velocidad = 5;
     character.qualities.sueño = 0;
     character.qualities.notaDesarrolloAgil = 0;
+    system.setQuality( "tarjeta" , false );
     system.setCharacterText("<p>¡Empieza tu increible aventura!</p>");
 };
