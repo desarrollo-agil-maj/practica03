@@ -245,8 +245,9 @@ undum.game.situations = {
 
     "last": new undum.SimpleSituation(
         "<h1>¡Enhorabuena!</h1>\
-        <p>Has decidido bajar en tu SUPER patinete Xiaomi to tuneado, tiene leds por partes y es capaz de alcanzar los 80kmh; antes pillaba 120kmh pero desde que te comiste aquella traicionera farola decidiste bajarle un poco la potencia. </p>\
-        \
+        <p>Has decidido bajar en tu SUPER patinete Xiaomi to tuneado, tiene leds por partes y es capaz de alcanzar los 80kmh; antes pillaba 120kmh pero desde que te comiste aquella traicionera farola decidiste bajarle un poco la potencia.\
+			Pero esta vez decides <a href='./patinete' class='once'> coger el patinete</a> convencido de que ninguna farola/obstáculo se interpondrá en tu camino.</p>\
+		\
 		<img src='media/img/scooter.png' class='float_right'>\
 			<p>Has llegado sin problema a la universidad, sin embargo, tu profesor de Desarrollo Ágil está muy enfadado contigo porque todavía no has llegado a clase.<br/> Ahora debes elegir alguna de las siguientes opciones para llegar a clase de forma correcta, sano y salvo:<br/></p>\
         <p>Estás bastante hambriento y así nadie puede desarrollar sus prácticas, por lo tanto, puedes <a href='llegaraclase1'>ir a desayunar</a>.</p>",
@@ -254,14 +255,23 @@ undum.game.situations = {
             tags: ["topic"],
             optionText: "Patinete Xiaomi Pro",
             displayOrder: 4,
-            enter: function (character, system, from) {
+			enter: function (character, system, from) {
                 system.setQuality("notaDesarrolloAgil", 10);
                 system.setCharacterText(
                     "<p>¡Bien! Serás capaz de llegar a tiempo con tu super patinete Xiaomi.</p>"
-                );
-            }
+                )
+				
+            },
+			actions: {
+                'patinete': function (character, system, action) {
+                    system.setQuality("patinete", true);
+                    system.setCharacterText("<p>Estupendo, ahora podrás coger el patinete sin problema</p>");
+                }
+			}
         }
+
     )
+	
 };
 
 // ---------------------------------------------------------------------------
@@ -282,9 +292,13 @@ undum.game.qualities = {
     tarjeta: new undum.OnOffQuality(
         "Tarjeta del autobús", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
     ),
+
     notaDesarrolloAgil: new undum.NonZeroIntegerQuality(
         "Nota en Desarrollo Ágil", { priority: "0001", group: 'progress' }
-    )
+    ),
+	patinete: new undum.OnOffQuality(
+		"Patinete Xiaomi Pro", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
+	)
 };
 
 // ---------------------------------------------------------------------------
@@ -306,5 +320,6 @@ undum.game.init = function (character, system) {
     character.qualities.sueño = 0;
     character.qualities.notaDesarrolloAgil = 0;
     system.setQuality( "tarjeta" , false );
+	system.setQuality( "patinete" , false );
     system.setCharacterText("<p>¡Empieza tu increible aventura!</p>");
 };
