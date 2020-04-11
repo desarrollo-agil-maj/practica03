@@ -72,12 +72,22 @@ undum.game.situations = {
     llegaraclase2: new undum.SimpleSituation(
         "<p>Sales corriendo de la cafetería, es muy importante llegar al cuarto de baño, no sería la primera vez que te lo haces encima...</p>\
         <p>¿Dónde ir en una situación así? De pronto recuerdas el dicho que todo estudiante de informática de la universidad de Jaén conoce (Entregar una práctica de FAC) </p>\
-        <p><b>¿En qué consiste esto?</b> Es sencillo, debes <a href='hub'>ir al edificio A3</a>, subir a la 3 o a la cuarta planta  y conseguir un puesto en uno de los mejores tronos de la UJA <i>(todo estudiante de ingeniería conoce este truco...)</i>.</p>",
+        <p><b>¿En qué consiste esto?</b> Es sencillo, debes <a href='llegaraclase3'>ir al edificio A3</a>, subir a la 3 o a la cuarta planta  y conseguir un puesto en uno de los mejores tronos de la UJA <i>(todo estudiante de ingeniería conoce este truco...)</i>.</p>",
         {
             heading: "Ir a desayunar",
             tags: ["topic"]
         }
     ),
+	llegaraclase3: new undum.SimpleSituation(
+        "<p>Atraviesas la mitad de la universidad corriendo, deseando que se te pasen esos fuertes dolores de estómago, pero no cesan.</p>\
+        <p>Llegas corriendo a la puerta del edificio A3, subes las escaleras y...¡SORPRESA! Te has encontrado con el profesor más enrollado del grado de informática (Víctor), que nada más verte te saluda y comienza a contarte una de sus grandes anécdotas.</p>\
+        <p> En ese momento,tú, preso de esos dolores fuertes de estómago no sabes cómo reaccionar al profesor, al fin y al cabo es un gran profesor pero <b>aún</b> no regala aprobados y no puedes permitirte el lujo de ser descortés con él.</p>\
+		<p>Por tanto, aguantas lo máximo posible cuando se te ocurre una gran idea, ¿Por qué no decirle que llegas tarde a una tutoría? En ese momento, no tienes ninguna excusa mejor y optas por esa opción. Así que, con las piernas temblorosas te despides y te diriges a la <a href='hub'>tercera planta.</a></p>",
+        {
+            heading: "Ir al edificio A3",
+            tags: ["topic"]
+        }
+	),
     links: new undum.SimpleSituation(
         "<p>Al ver que son las 10.30 de la mañana y que es demasiado pronto para despertarte, quitas la alarma de tu xiaomi, te das la vuelta y te vuelves a dormir.</p>\
         \
