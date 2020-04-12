@@ -82,26 +82,44 @@ undum.game.situations = {
         "<p>Atraviesas la mitad de la universidad corriendo, deseando que se te pasen esos fuertes dolores de estómago, pero no cesan.</p>\
         <p>Llegas corriendo a la puerta del edificio A3, subes las escaleras y...¡SORPRESA! Te has encontrado con el profesor más enrollado del grado de informática (Víctor), que nada más verte te saluda y comienza a contarte una de sus grandes anécdotas.</p>\
         <p> En ese momento,tú, preso de esos dolores fuertes de estómago no sabes cómo reaccionar al profesor, al fin y al cabo es un gran profesor pero <b>aún</b> no regala aprobados y no puedes permitirte el lujo de ser descortés con él.</p>\
-		<p>Por tanto, aguantas lo máximo posible cuando se te ocurre una gran idea, ¿Por qué no decirle que llegas tarde a una tutoría? En ese momento, no tienes ninguna excusa mejor y optas por esa opción. Así que, con las piernas temblorosas te despides y te diriges a la <a href='hub'>tercera planta.</a></p>",
+		<p>Por tanto, aguantas lo máximo posible cuando se te ocurre una gran idea, ¿Por qué no decirle que llegas tarde a una tutoría? En ese momento, no tienes ninguna excusa mejor y optas por esa opción. Así que, con las piernas temblorosas te despides y te diriges a la <a href='llegaraclase4'>tercera planta.</a></p>",
         {
             heading: "Ir al edificio A3",
+            tags: ["topic"]
+        }
+	),
+	llegaraclase4: new undum.SimpleSituation(
+        "<p>Una vez subes en el ascenso más lento del mundo, vas desesperado hacia los baños como si no hubiera mañana.</p>\
+        <p>Entras en el primer baño que pillas pero no te das cuenta de una cosa importantísima...<b> ¡No hay papel!</b>... pero primero a lo importante.</p>\
+        <p>Una vez que te has quedado más a gusto que un arbusto, piensas como limpiarte y no ir a clase oliendo fatal. Por casualidad tienes en la mochila unas practicas de Matemáticas Discreta que aprobaste el año pasado con sudor y lágrimas por lo que decides darle otro uso.</p>\
+		<p>Ya has acabado miras el reloj y te acuerdas que tenias que ir a clase y sales corriendo (como de costumbre). Llegas a clase unos minutillos tarde pero te dejan pasar por pena. Entregas las practicas de Desarrollo Ágil, Victor las ve...las corrige...y te dice que has sacado un...<b>¡¡¡¡10!!!! Te da la enhorabuena porque es una de las mejores practicas que ha visto de lo que lleva dando clase.</b></p>\
+		<p>Una vez acabada la clase decidís iros al Malavida para celebrar la nota de las practicas y os bebeis una coca cola zero zero por lo bien hecho.</p>",
+        {
+            heading: "No hay papel y llegada a clase",
             tags: ["topic"]
         }
 	),
     links: new undum.SimpleSituation(
         "<p>Al ver que son las 10.30 de la mañana y que es demasiado pronto para despertarte, quitas la alarma de tu xiaomi, te das la vuelta y te vuelves a dormir.</p>\
         \
-        <p>Pero como eres el tío con más mala suerte del mundo, resulta que ese día en la universidad ha estado repartiendo redbulls en la puerta de la biblioteca y además Victor, el profesor de Desarroll Ágil, ha dado un aprobado general con un 9.5 a todos los que han asistido hoy a clase y los que no han ido tienen un -7 al comenzar el examen de Mayo, por lo tanto, tienes Ágil suspenso. </p>\
+        <p>Cuando te despiertas <a href='./movil' class='once'> coges el movil</a> y te das cuenta que eres el tío con más mala suerte del mundo, resulta que ese día en la universidad ha estado repartiendo redbulls en la puerta de la biblioteca y además Victor, el profesor de Desarroll Ágil, ha dado un aprobado general con un 9.5 a todos los que han asistido hoy a clase y los que no han ido tienen un -7 al comenzar el examen de Mayo, por lo tanto, tienes Ágil suspenso. </p>\
         \
         <p>Ante semejante decepción al no recibir los redbulls (porque suspender a estas altura de la vida te da ya un poco igual) decides no seguir estudiando nunca más por lo que te metes en Magisterio</p>\
         \
         <p class='transient'>Aún estas a tiempo de no entrar en magisterio pincha <a href='hub'>aquí</a> y vuelve a la elección de vehículo..</p>",
         // <!--Enlace a otra situacion creado -->
         {
-            heading: "Pasas de todo y te quedas durmiendo",
+        	tags: ["topic"],
             diplayOrder: 2,
-            tags: ["topic"]
+            heading: "Pasas de todo y te quedas durmiendo",
+            actions: {
+                'movil': function (character, system, action) {
+                    system.setQuality("movil", true);
+                    system.setCharacterText("<p>Ya puedes mirar Whatsapp</p>");
+                }
+            }
         }
+        
     ),
     sticky: new undum.SimpleSituation(
         "\ <img src='media/games/tutorial/woodcut2.png' class='float_left'>\
@@ -299,6 +317,9 @@ undum.game.qualities = {
     sueño: new undum.FudgeAdjectivesQuality(
         "Sueño", { priority: "0002", group: 'stats' }
     ),
+    movil: new undum.OnOffQuality(
+        "Movíl", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
+    ),
     tarjeta: new undum.OnOffQuality(
         "Tarjeta del autobús", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
     ),
@@ -331,5 +352,6 @@ undum.game.init = function (character, system) {
     character.qualities.notaDesarrolloAgil = 0;
     system.setQuality( "tarjeta" , false );
 	system.setQuality( "patinete" , false );
+	system.setQuality( "movil" , false );
     system.setCharacterText("<p>¡Empieza tu increible aventura!</p>");
 };
