@@ -92,11 +92,11 @@ Así mismo, hemos añadido otra nueva tarea *Realizar documentación README.md*
 
 ### 3. Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones realizadas en el Product Backlog Refinement.
 - Product Backlog
-![](imagenes/sprint1_ejercicio1.png)
+![](imagenes/sprint2_ejercicio1.png)
 Tras exponer cada uno nuestro punto de vista acerca de los dos nuevos requisitos propuestos llegamos a la siguiente conclusión; los puntos de historia eran muy superiores al valor de la correspondiente historia de usuario, por tanto, no incluimos ningún nuevo requisito en el proceso de reorganización que debe hacerse en el Product Backlog Refinement.
 
 - Sprint Backlog
-![](imagenes/sprint1_ejercicio2.png)
+![](imagenes/sprint2_ejercicio2.png)
 
 ### 4. Conclusiones obtenidas en la Sprint Review
 - **¿Qué funcionalidades se han “implementado” y cuáles no?**
