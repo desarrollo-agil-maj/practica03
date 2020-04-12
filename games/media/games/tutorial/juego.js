@@ -91,17 +91,24 @@ undum.game.situations = {
     links: new undum.SimpleSituation(
         "<p>Al ver que son las 10.30 de la mañana y que es demasiado pronto para despertarte, quitas la alarma de tu xiaomi, te das la vuelta y te vuelves a dormir.</p>\
         \
-        <p>Pero como eres el tío con más mala suerte del mundo, resulta que ese día en la universidad ha estado repartiendo redbulls en la puerta de la biblioteca y además Victor, el profesor de Desarroll Ágil, ha dado un aprobado general con un 9.5 a todos los que han asistido hoy a clase y los que no han ido tienen un -7 al comenzar el examen de Mayo, por lo tanto, tienes Ágil suspenso. </p>\
+        <p>Cuando te despiertas <a href='./movil' class='once'> coges el movil</a> y te das cuenta que eres el tío con más mala suerte del mundo, resulta que ese día en la universidad ha estado repartiendo redbulls en la puerta de la biblioteca y además Victor, el profesor de Desarroll Ágil, ha dado un aprobado general con un 9.5 a todos los que han asistido hoy a clase y los que no han ido tienen un -7 al comenzar el examen de Mayo, por lo tanto, tienes Ágil suspenso. </p>\
         \
         <p>Ante semejante decepción al no recibir los redbulls (porque suspender a estas altura de la vida te da ya un poco igual) decides no seguir estudiando nunca más por lo que te metes en Magisterio</p>\
         \
         <p class='transient'>Aún estas a tiempo de no entrar en magisterio pincha <a href='hub'>aquí</a> y vuelve a la elección de vehículo..</p>",
         // <!--Enlace a otra situacion creado -->
         {
-            heading: "Pasas de todo y te quedas durmiendo",
+        	tags: ["topic"],
             diplayOrder: 2,
-            tags: ["topic"]
+            heading: "Pasas de todo y te quedas durmiendo",
+            actions: {
+                'movil': function (character, system, action) {
+                    system.setQuality("movil", true);
+                    system.setCharacterText("<p>Ya puedes mirar Whatsapp</p>");
+                }
+            }
         }
+        
     ),
     sticky: new undum.SimpleSituation(
         "\ <img src='media/games/tutorial/woodcut2.png' class='float_left'>\
@@ -299,6 +306,9 @@ undum.game.qualities = {
     sueño: new undum.FudgeAdjectivesQuality(
         "Sueño", { priority: "0002", group: 'stats' }
     ),
+    movil: new undum.OnOffQuality(
+        "Movíl", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
+    ),
     tarjeta: new undum.OnOffQuality(
         "Tarjeta del autobús", { priority: "0003", group: 'stats', onDisplay: "&#10003;" }
     ),
@@ -331,5 +341,6 @@ undum.game.init = function (character, system) {
     character.qualities.notaDesarrolloAgil = 0;
     system.setQuality( "tarjeta" , false );
 	system.setQuality( "patinete" , false );
+	system.setQuality( "movil" , false );
     system.setCharacterText("<p>¡Empieza tu increible aventura!</p>");
 };
