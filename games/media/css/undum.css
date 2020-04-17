@@ -1,5 +1,5 @@
 body {
-    background: #170804 url("../img/page_bg.jpg") repeat-x left top;
+    background: #170804 url("../img/suelo.jpg") repeat-x left top;
     font-family:  cursive;
     font-size: 18px;
     line-height: 1.6em;
@@ -22,7 +22,7 @@ body {
 }
 #title {
     max-width: 28em;
-    background: #e6e6c6 url("../img/title_bg.jpg") repeat -1.1em -1.1em;
+    background: #e6e6c6 url("../img/papiroredimensionado.jpg") repeat -1.1em -1.1em;
     margin: 2.2em auto 1.1em auto;
     padding: 1.7em;
     border: 1.1em solid rgba(0,0,0,0.25);
@@ -42,7 +42,7 @@ body {
     font-size: 1.6em;
     line-height: 1.4em;
     letter-spacing: 0.2em;
-    font-weight: normal;
+    font-weight: bold;
     padding-bottom: 1.1em;
     border-bottom: 1px solid #321;
 }
@@ -62,6 +62,8 @@ body {
     color: rgba(33,17,0,0.9);
     text-shadow: rgba(255,255,255,0.5) 2px 2px 2px,
     rgba(0,0,0,0.1) -1px -1px 2px;
+    font-weight: bold;
+
 }
 #title h1 span.fancy {
     font-size: 2.5em;
@@ -96,7 +98,7 @@ body {
 #content_wrapper {
     max-width: 28em;
     position: relative;
-    background: #e6e6c6 url("../img/text_bg.jpg") repeat left top;
+    background: #e6e6c6 url("../img/papiroredimensionado.jpg") repeat left top;
     margin: 0.6em auto 1.1em auto;
     padding: 2.8em;
     display: none; /* Shown by Javascript */
@@ -209,8 +211,9 @@ img.float_left {
 }
 .tools {
     padding: 0.6em;
-    width: 12.5em;
-    background: #cec3ae url("../img/tools_bg.jpg") repeat left top;
+    width: 13em;
+    font-weight: bold;
+    background: #cec3ae url("../img/papiro.jpg") repeat left top;
     position: absolute;
 }
 .tools p {
@@ -226,7 +229,7 @@ img.float_left {
 
 .tools h1 {
     font-size: 1.0em;
-    font-weight: normal;
+    font-weight: bold;
     border-bottom: 1px solid #321;
     margin-bottom: 0.6em;
 }
