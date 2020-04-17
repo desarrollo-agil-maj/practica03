@@ -94,6 +94,7 @@ undum.game.situations = {
             tags: ["topic"],
              exit: function (character, system, to) {
                 system.setQuality("puntuacion", character.qualities.puntuacion + 25);
+                system.setQuality("notaDesarrolloAgil", 10);
             }
         }
 	),
@@ -106,9 +107,7 @@ undum.game.situations = {
         {
             heading: "No hay papel y llegada a clase",
             tags: ["topic"],
-             exit: function (character, system, to) {
-                system.setQuality("puntuacion", character.qualities.velocidad + 25);
-            }
+
         }
 	),
     links: new undum.SimpleSituation(
@@ -306,7 +305,7 @@ undum.game.situations = {
             optionText: "Patinete Xiaomi Pro",
             displayOrder: 4,
 			enter: function (character, system, from) {
-                system.setQuality("notaDesarrolloAgil", 10);
+                
                 system.setCharacterText(
                     "<p>¡Bien! Serás capaz de llegar a tiempo con tu super patinete Xiaomi.</p>"
                 )
