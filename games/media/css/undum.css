@@ -209,7 +209,7 @@ img.float_left {
 }
 .tools {
     padding: 0.6em;
-    width: 8.9em;
+    width: 12.5em;
     background: #cec3ae url("../img/tools_bg.jpg") repeat left top;
     position: absolute;
 }
@@ -218,10 +218,10 @@ img.float_left {
     line-height: 1.5em;
 }
 .tools.left {
-    left: 0.4em;
+    left: -4em;
 }
 .tools.right {
-    right: 0.4em;
+    right:-4em;
 }
 
 .tools h1 {
