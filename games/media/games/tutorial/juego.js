@@ -66,7 +66,10 @@ undum.game.situations = {
         ,
         {
             heading: "Ir a desayunar",
-            tags: ["topic"]
+            tags: ["topic"],
+             exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + 25);
+            }
         }
     ),
     llegaraclase2: new undum.SimpleSituation(
@@ -75,7 +78,10 @@ undum.game.situations = {
         <p><b>¿En qué consiste esto?</b> Es sencillo, debes <a href='llegaraclase3'>ir al edificio A3</a>, subir a la 3 o a la cuarta planta  y conseguir un puesto en uno de los mejores tronos de la UJA <i>(todo estudiante de ingeniería conoce este truco...)</i>.</p>",
         {
             heading: "Ir a desayunar",
-            tags: ["topic"]
+            tags: ["topic"],
+             exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + 25);
+            }
         }
     ),
 	llegaraclase3: new undum.SimpleSituation(
@@ -85,7 +91,10 @@ undum.game.situations = {
 		<p>Por tanto, aguantas lo máximo posible cuando se te ocurre una gran idea, ¿Por qué no decirle que llegas tarde a una tutoría? En ese momento, no tienes ninguna excusa mejor y optas por esa opción. Así que, con las piernas temblorosas te despides y te diriges a la <a href='llegaraclase4'>tercera planta.</a></p>",
         {
             heading: "Ir al edificio A3",
-            tags: ["topic"]
+            tags: ["topic"],
+             exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + 25);
+            }
         }
 	),
 	llegaraclase4: new undum.SimpleSituation(
@@ -96,10 +105,14 @@ undum.game.situations = {
 		<p>Una vez acabada la clase decidís iros al Malavida para celebrar la nota de las practicas y os bebeis una coca cola zero zero por lo bien hecho.</p>",
         {
             heading: "No hay papel y llegada a clase",
-            tags: ["topic"]
+            tags: ["topic"],
+             exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.velocidad + 25);
+            }
         }
 	),
     links: new undum.SimpleSituation(
+
         "<p>Al ver que son las 10.30 de la mañana y que es demasiado pronto para despertarte, quitas la alarma de tu xiaomi, te das la vuelta y te vuelves a dormir.</p>\
         \
         <p>Cuando te despiertas <a href='./movil' class='once'> coges el movil</a> y te das cuenta que eres el tío con más mala suerte del mundo, resulta que ese día en la universidad ha estado repartiendo redbulls en la puerta de la biblioteca y además Victor, el profesor de Desarroll Ágil, ha dado un aprobado general con un 9.5 a todos los que han asistido hoy a clase y los que no han ido tienen un -7 al comenzar el examen de Mayo, por lo tanto, tienes Ágil suspenso. </p>\
@@ -108,6 +121,7 @@ undum.game.situations = {
         \
         <p class='transient'>Aún estas a tiempo de no entrar en magisterio pincha <a href='hub'>aquí</a> y vuelve a la elección de vehículo..</p>",
         // <!--Enlace a otra situacion creado -->
+        
         {
         	tags: ["topic"],
             diplayOrder: 2,
@@ -117,6 +131,9 @@ undum.game.situations = {
                     system.setQuality("movil", true);
                     system.setCharacterText("<p>Ya puedes mirar Whatsapp</p>");
                 }
+            },
+             exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.puntuacion - 100);
             }
         }
         
@@ -153,6 +170,9 @@ undum.game.situations = {
                     system.setQuality("tarjeta", true);
                     system.setCharacterText("<p>Estupendo, ahora podrás coger el autobús sin problema</p>");
                 }
+            },
+            exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.puntuacion - 25);
             }
         }
     ),
@@ -193,6 +213,7 @@ undum.game.situations = {
             },
             exit: function (character, system, to) {
                 system.setQuality("velocidad", character.qualities.velocidad + 100);
+                system.setQuality("puntuacion", character.qualities.puntuacion + 30);
             }
         }
     ),
@@ -215,6 +236,7 @@ undum.game.situations = {
     "saving": new undum.Situation({
         enter: function (character, system, from) {
             system.write($("#s_saving").html());
+            system.setQuality("puntuacion", character.qualities.puntuacion -35);
         },
 
         tags: ["topic"],
@@ -294,8 +316,13 @@ undum.game.situations = {
                 'patinete': function (character, system, action) {
                     system.setQuality("patinete", true);
                     system.setCharacterText("<p>Estupendo, ahora podrás coger el patinete sin problema</p>");
+                    system.setQuality("puntuacion", character.qualities.puntuacion + 40);
                 }
-			}
+			},
+             exit: function (character, system, to) {
+                system.setQuality("puntuacion", character.qualities.puntuacion + 25);
+            }
+
         }
 
     )
@@ -311,6 +338,9 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
+    puntuacion: new undum.IntegerQuality(
+        "Puntuación", { priority: "0001", group: 'stats' }
+    ),
     velocidad: new undum.IntegerQuality(
         "Velocidad", { priority: "0001", group: 'stats' }
     ),
@@ -347,6 +377,7 @@ undum.game.qualityGroups = {
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
+    character.qualities.puntuacion = 0;
     character.qualities.velocidad = 5;
     character.qualities.sueño = 0;
     character.qualities.notaDesarrolloAgil = 0;
