@@ -103,6 +103,7 @@ undum.game.situations = {
 	),
 	llegaraclase4: new undum.SimpleSituation(
         "<p>Una vez subes en el ascenso más lento del mundo, vas desesperado hacia los baños como si no hubiera mañana.</p>\
+        <img src='media/img/bano.png' class='float_right'>\
         <p>Entras en el primer baño que pillas pero no te das cuenta de una cosa importantísima...<b> ¡No hay papel!</b>... pero primero a lo importante.</p>\
         <p>Una vez que te has quedado más a gusto que un arbusto, piensas como limpiarte y no ir a clase oliendo fatal. Por casualidad tienes en la mochila unas practicas de Matemáticas Discreta que aprobaste el año pasado con sudor y lágrimas por lo que decides darle otro uso.</p>\
 		<p>Ya has acabado miras el reloj y te acuerdas que tenias que ir a clase y sales corriendo (como de costumbre). Llegas a clase unos minutillos tarde pero te dejan pasar por pena. Entregas las practicas de Desarrollo Ágil, Victor las ve...las corrige...y te dice que has sacado un...<b>¡¡¡¡10!!!! Te da la enhorabuena porque es una de las mejores practicas que ha visto de lo que lleva dando clase.</b></p>\
