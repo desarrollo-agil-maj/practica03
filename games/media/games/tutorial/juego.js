@@ -88,6 +88,7 @@ undum.game.situations = {
     ),
 	llegaraclase3: new undum.SimpleSituation(
         "<p>Atraviesas la mitad de la universidad corriendo, deseando que se te pasen esos fuertes dolores de estómago, pero no cesan.</p>\
+        <img src='media/img/diarrea.png' class='float_right'>\
         <p>Llegas corriendo a la puerta del edificio A3, subes las escaleras y...¡SORPRESA! Te has encontrado con el profesor más enrollado del grado de informática (Víctor), que nada más verte te saluda y comienza a contarte una de sus grandes anécdotas.</p>\
         <p> En ese momento,tú, preso de esos dolores fuertes de estómago no sabes cómo reaccionar al profesor, al fin y al cabo es un gran profesor pero <b>aún</b> no regala aprobados y no puedes permitirte el lujo de ser descortés con él.</p>\
 		<p>Por tanto, aguantas lo máximo posible cuando se te ocurre una gran idea, ¿Por qué no decirle que llegas tarde a una tutoría? En ese momento, no tienes ninguna excusa mejor y optas por esa opción. Así que, con las piernas temblorosas te despides y te diriges a la <a href='llegaraclase4'>tercera planta.</a></p>",
