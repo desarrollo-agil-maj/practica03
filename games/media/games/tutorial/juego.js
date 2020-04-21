@@ -61,6 +61,7 @@ undum.game.situations = {
 
     llegaraclase1: new undum.SimpleSituation(
         "<p>Aunque es un poco tarde tu barriga está empezando a hacer ruidos raros, tienes mucha hambre y decides ir a echarte una buena tostada en la Colombia50.</p>\
+		<img src='media/img/dolor.png' class='float_right'>\
         <p>La tostada te ha sabido a poco así que decides pedirte un sandwich Francés con extra de nutella, te encantan</p>\
         <p>A pesar de haber comido bastante sigues con un intenso dolor de barriga; a lo mejor no ha sido buena idea comer tanto, sientes retortijones, empiezas a sentirte cada vez peor, (la camarera debe haber puesto nutella caducada) por lo que no tienes otra que <a href='llegaraclase2'>ir al baño</a>.</p>"
         ,
@@ -74,6 +75,7 @@ undum.game.situations = {
     ),
     llegaraclase2: new undum.SimpleSituation(
         "<p>Sales corriendo de la cafetería, es muy importante llegar al cuarto de baño, no sería la primera vez que te lo haces encima...</p>\
+		<img src='media/img/correr.png' class='float_right'>\
         <p>¿Dónde ir en una situación así? De pronto recuerdas el dicho que todo estudiante de informática de la universidad de Jaén conoce (Entregar una práctica de FAC) </p>\
         <p><b>¿En qué consiste esto?</b> Es sencillo, debes <a href='llegaraclase3'>ir al edificio A3</a>, subir a la 3 o a la cuarta planta  y conseguir un puesto en uno de los mejores tronos de la UJA <i>(todo estudiante de ingeniería conoce este truco...)</i>.</p>",
         {
