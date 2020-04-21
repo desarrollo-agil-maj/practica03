@@ -61,6 +61,7 @@ undum.game.situations = {
 
     llegaraclase1: new undum.SimpleSituation(
         "<p>Aunque es un poco tarde tu barriga está empezando a hacer ruidos raros, tienes mucha hambre y decides ir a echarte una buena tostada en la Colombia50.</p>\
+		<img src='media/img/dolor.png' class='float_right'>\
         <p>La tostada te ha sabido a poco así que decides pedirte un sandwich Francés con extra de nutella, te encantan</p>\
         <p>A pesar de haber comido bastante sigues con un intenso dolor de barriga; a lo mejor no ha sido buena idea comer tanto, sientes retortijones, empiezas a sentirte cada vez peor, (la camarera debe haber puesto nutella caducada) por lo que no tienes otra que <a href='llegaraclase2'>ir al baño</a>.</p>"
         ,
@@ -74,6 +75,7 @@ undum.game.situations = {
     ),
     llegaraclase2: new undum.SimpleSituation(
         "<p>Sales corriendo de la cafetería, es muy importante llegar al cuarto de baño, no sería la primera vez que te lo haces encima...</p>\
+		<img src='media/img/correr.png' class='float_right'>\
         <p>¿Dónde ir en una situación así? De pronto recuerdas el dicho que todo estudiante de informática de la universidad de Jaén conoce (Entregar una práctica de FAC) </p>\
         <p><b>¿En qué consiste esto?</b> Es sencillo, debes <a href='llegaraclase3'>ir al edificio A3</a>, subir a la 3 o a la cuarta planta  y conseguir un puesto en uno de los mejores tronos de la UJA <i>(todo estudiante de ingeniería conoce este truco...)</i>.</p>",
         {
@@ -113,6 +115,7 @@ undum.game.situations = {
     links: new undum.SimpleSituation(
 
         "<p>Al ver que son las 10.30 de la mañana y que es demasiado pronto para despertarte, quitas la alarma de tu xiaomi, te das la vuelta y te vuelves a dormir.</p>\
+		<img src='media/img/dormir.png' class='float_right'>\
         \
         <p>Cuando te despiertas <a href='./movil' class='once'> coges el movil</a> y te das cuenta que eres el tío con más mala suerte del mundo, resulta que ese día en la universidad ha estado repartiendo redbulls en la puerta de la biblioteca y además Victor, el profesor de Desarroll Ágil, ha dado un aprobado general con un 9.5 a todos los que han asistido hoy a clase y los que no han ido tienen un -7 al comenzar el examen de Mayo, por lo tanto, tienes Ágil suspenso. </p>\
         \
@@ -201,7 +204,7 @@ undum.game.situations = {
     ),
     qualities: new undum.SimpleSituation(
         "<p>Te preparas para ir andando a la universidad, es aquello para lo que has entrenado tanto durante toda tu vida. Crees que lo puedes conseguir, ya has hecho fechorías peores (recuerda aquella vez que subiste desde Kharma a las 5 de la mañana un poco mareaillo)</p>\
-        \
+        <img src='media/img/andar.png' class='float_right'>\
 		<p> Si pudiste hacerlo ese día, hoy puedes, sin embargo para no fallar en tu misión de llegar a la universidad decides <a href='quality-types'>tomarte un redbull</a>, que por todo el mundo es conocido que te da alas.</p> ",
         {
             heading: "Ir andando",
