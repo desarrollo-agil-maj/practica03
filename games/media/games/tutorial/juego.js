@@ -203,7 +203,7 @@ undum.game.situations = {
     ),
     qualities: new undum.SimpleSituation(
         "<p>Te preparas para ir andando a la universidad, es aquello para lo que has entrenado tanto durante toda tu vida. Crees que lo puedes conseguir, ya has hecho fechorías peores (recuerda aquella vez que subiste desde Kharma a las 5 de la mañana un poco mareaillo)</p>\
-        \
+        <img src='media/img/andar.png' class='float_right'>\
 		<p> Si pudiste hacerlo ese día, hoy puedes, sin embargo para no fallar en tu misión de llegar a la universidad decides <a href='quality-types'>tomarte un redbull</a>, que por todo el mundo es conocido que te da alas.</p> ",
         {
             heading: "Ir andando",
