@@ -161,23 +161,23 @@ Hemos elegido las historias de usuario número 5, 8, 9 y 10 porque aportan valor
 ### 2. Captura de pantalla de dichas historias de usuario descompuestas en tareas al principio del Sprint.
 ![](imagenes/sprint3_ejercicio2.png)
 - La historia de usuario *5. El jugador debe poder saber cuántos puntos lleva en la partida. Los puntos pueden ser el porcentaje de aventura completada y/o la cantidad de monedas/estrellas/cualquier otro trofeo recogidas y/o cualquier otro parámetro que permita cuantificar su progreso en el juego en distintas partidas.* se descompone en las siguientes tareas:
-	- Añadir sistema de monedas como parámetro que permita cuantificar su progreso en el juego.
+	- Añadir sistema de monedas como parámetro que permita cuantificar su progreso en el juego. *Esfuerzo: 0,5 horas*
 
 - La historia de usuario *8. Cada situación deberá llevar una imagen descriptiva asociada.* se descompone en las siguientes tareas:
-	- Añadir imagen descriptiva a la situación "IR ANDANDO"
-	- Añadir imagen descriptiva a la situación "IR A DESAYUNAR"
-	- Añadir imagen descriptiva a la situación "PASAR DE TODO"
-	- Añadir imagen descriptiva a la situación "IR AL EDIFICIO A3"
-	- Añadir imagen descriptiva a la situación "IR AL BAÑO"
-	- Añadir imagen descriptiva a la situación "IR A LA TERCERA PLANTA"
+	- Añadir imagen descriptiva a la situación "IR ANDANDO". *Esfuerzo: 0,25 horas*
+	- Añadir imagen descriptiva a la situación "IR A DESAYUNAR". *Esfuerzo: 0,25 horas*
+	- Añadir imagen descriptiva a la situación "PASAR DE TODO". *Esfuerzo: 0,25 horas*
+	- Añadir imagen descriptiva a la situación "IR AL EDIFICIO A3". *Esfuerzo: 0,25 horas*
+	- Añadir imagen descriptiva a la situación "IR AL BAÑO". *Esfuerzo: 0,25 horas*
+	- Añadir imagen descriptiva a la situación "IR A LA TERCERA PLANTA". *Esfuerzo: 0,25 horas*
 
 - La historia de usuario *9. Se subirá el juego a un sitio web disponible on-line (es decir, no un servidor local)* se descompone en las siguientes tareas:
-	- Crear cuenta en https://byet.host/
-	- Se subirá el juego a un sitio web disponible on-line.
+	- Crear cuenta en https://byet.host/. *Esfuerzo: 0,25 horas*
+	- Se subirá el juego a un sitio web disponible on-line. *Esfuerzo: 0,25 horas*
 
 - La historia de usuario *10. Se deberá modificar el CSS del juego original, usando otras fuentes de letra, fondos de pantalla, etc.* se descompone en las siguientes tareas:
-	- Modificar el CSS; cambiar la fuente de letra
-	- Modificar el CSS; cambiar los fondos de pantalla
+	- Modificar el CSS; cambiar la fuente de letra. *Esfuerzo: 0,25 horas*
+	- Modificar el CSS; cambiar los fondos de pantalla. *Esfuerzo: 0,25 horas*
 
 Así mismo, hemos añadido otras dos nuevas tareas *Realizar documentación README.md* y *Cambiar calificación en desarrollo ágil de "bajar en patinete" a "Llegar a clase"*.
 
@@ -197,9 +197,8 @@ Tras exponer cada uno nuestro punto de vista acerca del nuevo requisito propuest
 	- Sí, hemos revisado el product backlog, sin embargo, no hicimos ninguna modificación en el Product Backlog Refinement.
 	- Todas las estimaciones de los puntos de historia y el valor de cada historia de usuario es el correcto.
 - **Con respecto al Equipo de programación: ¿qué ha ido bien, qué problemas surgieron y qué soluciones dimos?**
-	- La organización ha ido mejor que en el sprint anterior, hemos sido capaces de vernos casi a diario por Google Meets, para hacer los Dailys Scrum y saber qué tal iba cada uno de nosotros con las tareas asociadas.
-	- No hemos podido vernos en persona por causas ajenas a nosotros pero hemos sido capaces de adaptarnos a la situación para desarrollar el proyecto de la mejor manera posible.
-	- Cada integrante del equipo ha trabajo de forma coordinada y respetando todas las tareas asignadas previamente en el Sprint Planning.
+	- Tuvimos que hacer un cambio en una situación que añadimos en los Sprints pasados. Al llegar a la universidad automáticamente el jugador obtenía un 10 en la asignatura de Desarrollo Ágil, sin embargo, la asignación de esa nota debería hacerse una vez que el usuario llegue a clase.
+	- Hemos podido programar cada una de las tareas asignadas sin mucho problema, todos hemos sido capaces de resolver cada una de ellas de forma ágil.
 - **¿Por dónde seguir? ¿Qué es lo siguiente que aporta más valor al producto?**
 	- Hemos terminado el proyecto cumpliendo con todos los objetivos propuestos.
 
