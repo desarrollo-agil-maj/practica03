@@ -243,13 +243,13 @@ Todas las tareas han sido realizadas y finalizadas a tiempo. Cada miembro del eq
 ![](imagenes/practica6_ejercicio4.png)
 
 ### Tablas (una por cada sprint) con los datos para las gráficas de los sprints
-- Sprint 1
+- **Sprint 1**  
 ![](imagenes/practica6_ejercicio5_sprint1.png)
 
-- Sprint 2
+- **Sprint 2**  
 ![](imagenes/practica6_ejercicio5_sprint2.png)
 
-- Sprint 3
+- **Sprint 3**  
 ![](imagenes/practica6_ejercicio5_sprint3.png)
 
 ### Gráficas burndown y burn-up de los puntos de historia o tareas del sprint 1
