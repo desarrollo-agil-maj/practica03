@@ -5,6 +5,7 @@
    * [Práctica 03 - Sprint 1](#práctica-03---sprint-1)
    * [Práctica 04 - Sprint 2](#práctica-04---sprint-2)
    * [Práctica 05 - Sprint 3](#práctica-05---sprint-3)
+   * [Práctica 06 - Métricas](#práctica-06---métricas)
    
 ## Miembros del equipo de desarrollo
 - Mario Díaz González: [mdg00013@red.ujaen.es](mailto:msg00013@red.ujaen.es)
@@ -221,3 +222,45 @@ Todas las tareas han sido realizadas y finalizadas a tiempo. Cada miembro del eq
 
 ### 7. Captura de pantalla de las historias de usuario del Sprint Backlog una vez acabado el sprint.
 ![](imagenes/sprint3_ejercicio6.png)
+
+## Práctica 06 - Métricas
+
+**Enlace a la hoja de cálculo:** [Google Sheets](https://docs.google.com/spreadsheets/d/1CXVTsphiG_hBV7qNioNaUOo2AeM3sER6MqB3A2hRzxk/edit?usp=sharing)
+
+### Tabla para los datos de las gráficas del proyecto en su totalidad
+![](imagenes/practica6_ejercicio1.png)
+
+### Gráficas burndown y burn-up de los puntos de historia
+![](imagenes/practica6_ejercicio2.png)
+
+### Gráficas burndown y burn-up del Valor asociado a las Historias de Usuario
+![](imagenes/practica6_ejercicio3.png)
+
+### Tabla de velocidades
+![](imagenes/practica6_ejercicio4.png)
+
+### Tablas (una por cada sprint) con los datos para las gráficas de los sprints
+- **Sprint 1**
+![](imagenes/practica6_ejercicio5_sprint1.png)
+
+- **Sprint 2**
+![](imagenes/practica6_ejercicio5_sprint2.png)
+
+- **Sprint 3**
+![](imagenes/practica6_ejercicio5_sprint3.png)
+
+### Gráficas burndown y burn-up de los puntos de historia o tareas del sprint 1
+![](imagenes/practica6_ejercicio6.png)
+
+### Gráficas burndown y burn-up de los puntos de historia o tareas del sprint 2
+![](imagenes/practica6_ejercicio7.png)
+
+### Gráficas burndown y burn-up de los puntos de historia o tareas del sprint 3
+![](imagenes/practica6_ejercicio8.png)
+
+### Conclusiones que sacáis a la vista de las tablas y gráficas obtenidas
+- **Relativas al proyecto en su totalidad:**
+Según vemos en las gráficas, la trayectoria que hemos ido siguiendo es muy parecida a la trayectoria ideal, podemos sacar en conclusión que el desarrollo del proyecto ha sido el correcto.
+
+- **Relativas al desarrollo de los sprints:**
+Debido a la simplicidad de los asuntos a tratar en cada sprint, no nos ha hecho falta dedicar tiempo de forma diaria a la resolución de cada tarea, por tanto, se podría decir que en este aspecto no hemos seguido la metodología ágil Scrum. Sin embargo, el proyecto nos ha ayudado a comprender y a saber aplicar la metodología ágil en proyectos más completos, de hecho, hemos empleando dicha metodología en asignaturas con prácticas más complejas y tediosas como desarrollo de aplicaciones web, donde hemos hecho uso de GitLab y su board para la gestión de issues.
