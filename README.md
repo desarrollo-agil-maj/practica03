@@ -227,6 +227,9 @@ Todas las tareas han sido realizadas y finalizadas a tiempo. Cada miembro del eq
 
 **Enlace a la hoja de cálculo:** [Google Sheets](https://docs.google.com/spreadsheets/d/1CXVTsphiG_hBV7qNioNaUOo2AeM3sER6MqB3A2hRzxk/edit?usp=sharing)
 
+### Captura de pantalla de Trello durante la realización de la práctica 6
+![](imagenes/practica6_trello.png)
+
 ### Tabla para los datos de las gráficas del proyecto en su totalidad
 ![](imagenes/practica6_ejercicio1.png)
 
